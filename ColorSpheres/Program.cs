@@ -27,5 +27,36 @@ namespace ColorSpheres
         {
             return (byte)((Red + Green + Blue) / 3);
         }
+    
+    public class Sphere
+    {
+        private Color Color;
+        private float Radius;
+        private int TimesThrown;
+
+        public Sphere(Color color, float radius)
+        {
+            Color = color;
+            Radius = radius;
+            TimesThrown = 0; // Sphere starts unused
+        }
+
+        public void Throw()
+        {
+            if (Radius > 0)  // Can only throw if not popped
+            {
+                TimesThrown++;
+            }
+        }
+
+        public void Pop()
+        {
+            Radius = 0;  // Sphere is now "popped"
+        }
+
+        public Color GetColor() => Color;
+        public float GetRadius() => Radius;
+        public int GetTimesThrown() => TimesThrown;
+        }
     }
 }
