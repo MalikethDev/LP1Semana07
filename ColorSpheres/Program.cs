@@ -5,6 +5,8 @@ namespace ColorSpheres
     public class Color
     {
         private byte Red, Green, Blue, Alpha;
+
+        // Constructor to initialize the color components
         public Color(byte red, byte green, byte blue, byte alpha = 255)
         {
             Red = red;
@@ -18,5 +20,12 @@ namespace ColorSpheres
         public byte GetGreen() => Green;
         public byte GetBlue() => Blue;
         public byte GetAlpha() => Alpha;
+
+        // GetGrey method = average of green, red and blue components
+        // Value is between 0 and 255
+        public byte GetGrey()
+        {
+            return (byte)((Red + Green + Blue) / 3);
+        }
     }
 }
