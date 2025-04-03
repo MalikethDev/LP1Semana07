@@ -32,5 +32,5 @@ classDiagram
         + Main()
     }
 
-    Color <|-- Sphere : has a
-    Program --> Sphere : uses
+    Color <|-- Sphere
+    Program --> Sphere
