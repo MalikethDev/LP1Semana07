@@ -76,7 +76,7 @@ namespace ColorSpheres
     
     public class Sphere
     {
-        private Color Color;
+        private readonly Color Color; // readonly because once a sphere is created, its color should not change
         private float Radius;
         private int TimesThrown;
 
