@@ -1,5 +1,7 @@
 # UML Diagram
 
+```mermaid
+
 classDiagram
     class Color {
         - byte Red
